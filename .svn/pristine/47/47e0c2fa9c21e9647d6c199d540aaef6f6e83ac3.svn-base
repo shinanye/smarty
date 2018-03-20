@@ -1,0 +1,43 @@
+<?php
+
+class IndexController{
+    private $instanceSa;
+    public function __construct()
+    {
+        # code...
+        $this->instanceSa = MySmarty::getInstanceSa();
+    }
+    public function server()
+    {
+        # code...
+        $data = getModel()->server();
+        // echo  "获取数据库数据";
+        // print_r($data);
+
+        $this->instanceSa->display("app/index/view/casePanel/service.html");
+       
+    }
+    public function product()
+    {
+        # code...
+        $this->instanceSa->display("app/index/view/casePanel/product.html");
+    }
+
+    public function cases()
+    {
+        # code...
+        $this->instanceSa->display("app/index/view/casePanel/cases.html");
+    }
+
+    public function contact()
+    {
+        # code...
+        $this->instanceSa->display("app/index/view/casePanel/contact.html");
+    }
+
+    public function join()
+    {
+        # code...
+        $this->instanceSa->display("app/index/view/casePanel/join.html");
+    }
+}

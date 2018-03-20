@@ -1,0 +1,15 @@
+<?php
+class JoinController{
+  
+    private $instanceSa;
+
+    public function __construct()
+    {
+        $this->instanceSa = MySmarty::getInstanceSa();
+    }
+    
+    public function join()
+    {
+        $this->instanceSa->display("app/index/view/casePanel/join.html");
+    }
+}

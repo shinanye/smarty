@@ -1,0 +1,10 @@
+<?php
+class IndexModel{
+    private $db_instance;
+    public function __construct()
+    {
+       $this->db_instance = DBO::getInstance();
+    }
+
+
+}

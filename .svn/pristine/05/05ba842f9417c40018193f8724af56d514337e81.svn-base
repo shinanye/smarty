@@ -1,0 +1,63 @@
+<?php
+/* Smarty version 3.1.30, created on 2018-03-12 11:17:00
+  from "D:\wamp64\www\project\mbkj\app\index\view\casePanel\details.html" */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.30',
+  'unifunc' => 'content_5aa661ac5ef557_11123670',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '932c5a90e4ddce4b2054483cbf7376205a513d10' => 
+    array (
+      0 => 'D:\\wamp64\\www\\project\\mbkj\\app\\index\\view\\casePanel\\details.html',
+      1 => 1520853417,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+    'file:app/index/view/header.html' => 1,
+    'file:app/index/view/footer.html' => 1,
+  ),
+),false)) {
+function content_5aa661ac5ef557_11123670 (Smarty_Internal_Template $_smarty_tpl) {
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>摩博科技</title>
+    <link rel="stylesheet" href="static/css/index/common.css">
+    <link rel="stylesheet" href="static/css/index/other.css">
+</head>
+<body>
+    <nav>
+        <?php $_smarty_tpl->_subTemplateRender("file:app/index/view/header.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+
+    </nav>
+    <main>
+        
+        <br>
+        
+        <div class="service-con">
+            <div class="main">
+                <h1 style="text-align: center;font-size:23px;font-weight:bold;margin:0 0 2% 0;"><?php echo $_smarty_tpl->tpl_vars['title']->value;?>
+</h1>
+                 <p><?php echo $_smarty_tpl->tpl_vars['content']->value;?>
+</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+            <?php $_smarty_tpl->_subTemplateRender("file:app/index/view/footer.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+
+    </footer>
+</body>
+</html><?php }
+}

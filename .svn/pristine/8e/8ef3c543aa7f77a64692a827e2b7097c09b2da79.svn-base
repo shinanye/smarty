@@ -1,0 +1,66 @@
+<?php
+
+class IndexController{
+    private $instanceSa;
+    public function __construct()
+    {
+        # code...
+        $this->instanceSa = MySmarty::getInstanceSa();
+    }
+    public function server()
+    {
+        # code...
+        $data = getModel()->server();//getModel()  IndexMode类的实例化
+        // echo  "获取数据库数据";
+        // print_r($data);
+
+        $this->instanceSa->display("app/index/view/casePanel/service.html");
+       
+    }
+    public function product()
+    {
+        $data = getModel()->product();
+        $this->instanceSa->assign("data",$data);
+        if(!isset($_GET["id"])){
+            $this->instanceSa->assign("data",$data);
+            $this->instanceSa->display("app/index/view/casePanel/product.html");
+            
+        }else{
+            $id = $_GET["id"];
+            foreach($data as $item){
+                if($item["Id"]==$id){
+                    $this->instanceSa->assign("title",$item["title"]);
+                    $this->instanceSa->assign("content",$item["content"]);
+                }
+            }
+            $this->instanceSa->display("app/index/view/casePanel/details.html");
+        }
+    }
+
+    public function cases()
+    {
+        # code...
+        $info = getModel()->cases();
+        $this->instanceSa->assign("data",$info["data"]);
+        $this->instanceSa->assign("colunms",$info["colunms"]);
+        $this->instanceSa->display("app/index/view/casePanel/cases.html");
+    }
+
+    public function contact()
+    {
+        # code...
+        $this->instanceSa->display("app/index/view/casePanel/contact.html");
+    }
+
+    public function join()
+    {
+        # code...
+        $this->instanceSa->display("app/index/view/casePanel/join.html");
+    }
+
+    public function seek()
+    {
+        # code...
+        $this->instanceSa->display("app/index/view/casePanel/seek.html");
+    }
+}

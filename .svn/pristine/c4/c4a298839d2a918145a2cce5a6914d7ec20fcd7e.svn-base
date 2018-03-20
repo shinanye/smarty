@@ -1,0 +1,246 @@
+<?php
+/* Smarty version 3.1.30, created on 2018-03-12 06:44:57
+  from "D:\wamp64\www\project\mbkj\app\index\view\casePanel\seek.html" */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.30',
+  'unifunc' => 'content_5aa621e9910074_52491288',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    'b258e831c440cd3315dce41e8d4c2b3d7b618cba' => 
+    array (
+      0 => 'D:\\wamp64\\www\\project\\mbkj\\app\\index\\view\\casePanel\\seek.html',
+      1 => 1520837095,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+    'file:app/index/view/header.html' => 1,
+    'file:app/index/view/footer.html' => 1,
+  ),
+),false)) {
+function content_5aa621e9910074_52491288 (Smarty_Internal_Template $_smarty_tpl) {
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>摩博科技</title>
+    <link rel="stylesheet" href="static/css/index/common.css">
+    <link rel="stylesheet" href="static/css/index/other.css">
+</head>
+<body>
+    <nav>
+        <?php $_smarty_tpl->_subTemplateRender("file:app/index/view/header.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+
+    </nav>
+    <div class='joinUs-banner' style='background: url(static/img/data/20160802/20160802135948_90702.png ) no-repeat center; position:relative; height:300px;'></div>
+            
+    <main>
+            <div class="consult-content">
+                    <div class="consult-content-in">
+                        <a href="index.php?r=post/default/list&taxonomy=95">
+                            <div class="consult-list clearfix">
+                                <img src="data/attachment/20180301/20180301162944_58470.jpg" >
+                                <div class="list-right">
+                                    <h1>【喜讯】连锁餐饮利润提升专家奥琦玮与魔学院达成战略合作！</h1>
+                                    <p>近日，奥琦玮与魔学院基于互利互惠、和谐共赢的原则达成战略合作！今后，互为战略合作伙伴的奥琦玮与魔学院会重点针对餐饮行业展开一系列平台与内容结合的合作！</p>
+                                    <ul>
+                                        <li>发布时间：2017 年 12 月 14 日 </li>
+                                        <li>阅读全文</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="index.php?r=post/default/list&taxonomy=94">
+                            <div class="consult-list clearfix">
+                                <img src="data/attachment/20171123/20171123141712_12220.jpg" >
+                                <div class="list-right">
+                                    <h1>“检科魔学”打造企业质量提升专业化全链条服务平台</h1>
+                                    <p>“检科学院”&“魔学院”依照《国务院关于开展质量提升提升行动指导意见》、《质检总局关于广泛开展中小企业质量技术服务活动的通知》、《国务院关于积极推进“互联网+”行动的指导意见》相关要求，为全面加强企业质量管理而形成统一战线，致力打造企业质量提升专业化全链条服务平台。（正经脸看着你）国家大事不可玩笑，论合作，我们是认真的。</p>
+                                    <ul>
+                                        <li>发布时间：2017 年 11 月 23 日 </li>
+                                        <li>阅读全文</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <a href="index.php?r=post/default/list&taxonomy=93">
+                            <div class="consult-list clearfix">
+                                <img src="data/attachment/20171117/20171117143743_19428.jpg" >
+                                <div class="list-right">
+                                    <h1>上电视啦！酷炫发声，魔学院TV版正式亮相！</h1>
+                                    <p>7月20日，视讯行业引领者网动将在北京骏马国际酒店举办“智连会议  网动未来——2017网动会议室级可视化智能硬件”新品发布会。</p>
+                                    <ul>
+                                        <li>发布时间：2017 年 11 月 17 日 </li>
+                                        <li>阅读全文</li>
+                                        </ul>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="index.php?r=post/default/list&taxonomy=92">
+                            <div class="consult-list clearfix">
+                                <img src="data/attachment/20171117/20171117142830_32303.jpg" >
+                                <div class="list-right">
+                                    <h1>汽车培训行业即将加速，请扶稳坐好！</h1>
+                                    <p>近日，德莫特尔与魔学院达成战略合作！作为战略合作伙伴，德莫特尔将会与魔学院重点针对汽车行业培训开展一系列从内容到平台的深度合作。</p>
+                                    <ul>
+                                        <li>发布时间：2017 年 11 月 17 日 </li>
+                                        <li>阅读全文</li>
+                                        </ul>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="index.php?r=post/default/list&taxonomy=91">
+                            <div class="consult-list clearfix">
+                                <img src="data/attachment/20171117/20171117140241_11144.jpg" >
+                                <div class="list-right">
+                                    <h1>魔学院荣登2017中国好服务30强</h1>
+                                    <p>10月19日，由软通动力信息技术(集团)有限公司指导，创新企服联盟发起，通力互联、万众金服联合主办的“中国企业服务生态伙伴大会暨中国好服务发布”在北京软通动力大厦隆重召开。</p>
+                                    <ul>
+                                        <li>发布时间：2017 年 11 月 17 日 </li>
+                                        <li>阅读全文</li>
+                                        </ul>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="index.php?r=post/default/list&taxonomy=90">
+                            <div class="consult-list clearfix">
+                                <img src="data/attachment/20171116/20171116145219_11423.jpg" >
+                                <div class="list-right">
+                                    <h1>魔学院获 “2017中国十大影响力人力资源品牌奖”</h1>
+                                    <p>7月14日，“2017大中华地区HRVP高峰论坛暨第一届中国人力资源优秀品牌展”在上海丽思卡尔顿酒店召开，魔学院参展并获得“2017中国十大影响力人力资源品牌奖——咨询培训类”大奖，魔学院院长熊二博士上台领奖。</p>
+                                    <ul>
+                                        <li>发布时间：2017 年 11 月 16 日 </li>
+                                        <li>阅读全文</li>
+                                        </ul>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="index.php?r=post/default/list&taxonomy=89">
+                            <div class="consult-list clearfix">
+                                <img src="data/attachment/20171116/20171116141546_67803.jpg" >
+                                <div class="list-right">
+                                    <h1>酒店培训行业标杆思越教育和魔学院达成战略合作！</h1>
+                                    <p>近日，思越教育和魔学院达成战略合作！广州思越教育咨询有限公司资深顾问、特聘教授殷彤与摩博科技、魔学院CEO熊军进行了签约仪式，魔学院院长、摩博科技CTO熊兵出席了签约仪式。作为战略合作伙伴，思越教育将会与魔学院重点针对酒店培训开展一系列从内容到平台的深度合作，以期互助共赢。</p>
+                                    <ul>
+                                        <li>发布时间：2017 年 11 月 16 日 </li>
+                                        <li>阅读全文</li>
+                                        </ul>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="index.php?r=post/default/list&taxonomy=88">
+                            <div class="consult-list clearfix">
+                                <img src="data/attachment/20171116/20171116134713_97569.jpg" >
+                                <div class="list-right">
+                                    <h1>吉林智享人力资源有限公司与魔学院成功达成战略合作</h1>
+                                    <p>近日，吉林智享人力资源有限公司与魔学院成功达成战略合作。
+                双方基于良好的信任，处于双方长远发展战略上的考虑，决定强强联合，开展合作。双方本着“互惠、互利、稳定、恒久、高效、优质”的合作精神，结成深度的战略合作伙伴关系。</p>
+                <ul>
+                    <li>发布时间：2017 年 11 月 10 日 </li>
+                    <li>阅读全文</li>
+                    </ul>
+            </div>
+        </div>
+    </a>
+                <a href="index.php?r=post/default/list&taxonomy=76">
+                    <div class="consult-list clearfix">
+                        <img src="data/attachment/20171115/20171115150925_61930.jpg" >
+                        <div class="list-right">
+                            <h1>【魔动态】喜讯：魔学院与北外网课达成战略合作！</h1>
+                            <p>2017年4月，魔学院与北外网课达成共同合作意向，双方本着互惠互利，长期互促发展的宗旨，建立成为长期战略合作伙伴关系并签署了正式的合作合约。</p>
+                            <ul>
+                                <li>发布时间：2017 年 05 月 10 日 </li>
+                                <li>阅读全文</li>
+                                </ul>
+                        </div>
+                    </div>
+                </a>
+                <a href="index.php?r=post/default/list&taxonomy=64">
+                    <div class="consult-list clearfix">
+                        <img src="data/attachment/20170328/20170328160243_19318.jpg" >
+                        <div class="list-right">
+                            <h1>【摩博新闻台】重磅消息！南开大学现代管理研究所和魔学院达成战略合作！</h1>
+                            <p>近日，南开大学现代管理研究所与魔学院达成战略合作协议。现代管理研究所所长李亚副教授与摩博科技、魔学院CEO熊军进行了签约仪式，魔学院院长熊兵等出席了签约仪式。作为战略合作伙伴，现代管理研究所将会和魔学院从内容到平台开展一系列深度合作，共享资源，寻求共同发展。</p>
+                            <ul>
+                                <li>发布时间：2017 年 03 月 28 日 </li>
+                                <li>阅读全文</li>
+                                </ul>
+                        </div>
+                    </div>
+                </a>
+                <a href="index.php?r=post/default/list&taxonomy=62">
+                    <div class="consult-list clearfix">
+                        <img src="data/attachment/20161103/20161103104051_27184.jpg" >
+                        <div class="list-right">
+                            <h1>免费的360网盘都死了，2B SaaS免费还靠谱</h1>
+                            <p>我此前在一次培训展会上收获了一句话：培训贵、不培训更贵。能帮你提升企业效率，初期有一定投入，长远来看一定为企业带来更大的收益。</p>
+                            <ul>
+                                <li>发布时间：2016 年 11 月 03 日 </li>
+                                <li>阅读全文</li>
+                                </ul>
+                        </div>
+                    </div>
+                </a>
+                <a href="index.php?r=post/default/list&taxonomy=61">
+                    <div class="consult-list clearfix">
+                        <img src="data/attachment/20161026/20161026115529_19084.png" >
+                        <div class="list-right">
+                            <h1>【喜讯】摩博科技荣获“2016最具实力行业服务商50强”称号！</h1>
+                            <p>9月7号，在在线教育资讯网主办的2016中国企业在线学习大会（简称CEFE）上摩博科技作为喜获2016年最
+                                具实力行业服务商50强——最强平台技术服务商称号。并现场领奖——</p>
+                <ul>
+                    <li>发布时间：2016 年 10 月 25 日 </li>
+                    <li>阅读全文</li>
+                    </ul>
+            </div>
+        </div>
+    </a>
+                <a href="index.php?r=post/default/list&taxonomy=60">
+                    <div class="consult-list clearfix">
+                        <img src="data/attachment/20161026/20161026150847_88164.png" >
+                        <div class="list-right">
+                            <h1>研报：2016年中国SaaS市场必看的八大趋势</h1>
+                            <p>作者：T客汇 人称T客火热的2016年接近尾声，中国的ＳaaＳ市场从资本泡沫开始趋于理性，从注重市场
+                驱动趋向于注重产品驱动，那么2016年中国ＳaaS市场又有哪些值得关注的焦点呢？</p>
+                <ul>
+                    <li>发布时间：2016 年 10 月 26 日 </li>
+                    <li>阅读全文</li>
+                </ul>
+            </div>
+        </div>
+    </a>
+    <a href="index.php?r=post/default/list&taxonomy=59">
+        <div class="consult-list clearfix">
+            <img src="data/attachment/20160729/20160729174107_57243.png" >
+            <div class="list-right">
+                <h1>专访摩博科技CEO熊军 移动互联网下的企业转型之路</h1>
+                <p>全面移动化时代已经来临，你的企业还安全吗?为此，记者采访了在移动互联网领域从业20年的摩博科技
+                    的CEO熊军，他在移动领域帮助多家传统企业成功实现了转型升级，让他来为我们讲讲在移动化的道路上
+                    企业要避免踏入的几个坑以及正确的转型之路到底怎么走。</p>
+    <ul>
+        <li>发布时间：2016 年 07 月 29 日 </li>
+        <li>阅读全文</li>
+    </ul>
+            </div>
+        </div>
+    </a>    
+    </div>      
+    </div>
+    </main>
+    <footer>
+            <?php $_smarty_tpl->_subTemplateRender("file:app/index/view/footer.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+
+    </footer>
+</body>
+</html><?php }
+}

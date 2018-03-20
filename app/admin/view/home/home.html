@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>luzan</title>
+    <link href="static/js/node_modules/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/public.css">
+</head>
+<body>
+{include file="app/admin/view/public/public.html"}
+<div class="col-sm-9 col-md-10">
+    <div class="page-header">
+        <h2>欢迎使用<small>路赞后台管理系统</small></h2>
+    </div>
+    <ol class="breadcrumb">
+        <li><span class="glyphicon glyphicon-tag"></span><a href="admin.php?c=Index">平台整理指标</a></li>
+    </ol>
+    <div class="panel loginCount">
+        <div class="panel-heading">
+            <span class="glyphicon glyphicon-cloud"></span>
+            <b class="dataTitle">
+                <h5>今日登录用户数</h5>
+                <p>250</p>
+            </b>
+        </div>
+        <div class="panel-body">
+            <span><a href="#">查看</a></span><span class="glyphicon glyphicon-circle-arrow-right rightClick"></span>
+        </div>
+    </div>
+    <div class="panel articleCount">
+        <div class="panel-heading">
+            <span class="glyphicon glyphicon-th-list"></span>
+            <b class="dataTitle">
+                <h5>文章数量</h5>
+                <p>17</p>
+            </b>
+        </div>
+        <div class="panel-body">
+            <span><a href="admin.php?c=Content">查看</a></span><span class="glyphicon glyphicon-circle-arrow-right rightClick"></span>
+        </div>
+    </div>
+    <div class="panel maxRead">
+        <div class="panel-heading">
+            <span class="glyphicon glyphicon-stats"></span>
+            <b class="dataTitle">
+                <h5>文章最大阅读数</h5>
+                <p>140</p>
+            </b>
+        </div>
+        <div class="panel-body">
+            <span><a href="admin.php?c=Content">查看</a></span><span class="glyphicon glyphicon-circle-arrow-right rightClick"></span>
+        </div>
+    </div>
+    <div class="panel recommendCount">
+        <div class="panel-heading">
+            <span class="glyphicon glyphicon-filter"></span>
+            <b class="dataTitle">
+                <h5>推荐位数</h5>
+                <p>4</p>
+            </b>
+        </div>
+        <div class="panel-body">
+            <span><a href="admin.php?c=Position">查看</a></span><span class="glyphicon glyphicon-circle-arrow-right rightClick"></span>
+        </div>
+    </div>
+</div>
+<div class="clear"></div>
+</body>
+<script src="static/js/node_modules/jquery/dist/jquery.min.js"></script>
+<script src="static/js/node_modules/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+<script>
+    $().ready(function(){
+        var hei=$(window).height();
+        $(".sidebar").css("height",hei-60+"px");
+    });
+
+</script>
+</html>
+

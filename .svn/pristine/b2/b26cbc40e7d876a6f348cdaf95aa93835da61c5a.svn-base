@@ -1,0 +1,22 @@
+<?php
+function getConntroller(){
+    $c = $_GET["c"]; //类名 
+    $a = $_GET["a"];    //方法名
+    $c = ucfirst($c);
+    $c= $c."Controller";
+    require "app/index/controller/".$c.".php";
+    
+    $re = new $c();
+    $re->$a();
+}
+
+function getModel(){
+    $c = $_GET["c"]; //类名 
+    $a = $_GET["a"];    //方法名
+    $c = ucfirst($c);
+    $c= $c."Model";
+    require "app/index/model/".$c.".php";
+    
+    return new $c();
+}
+

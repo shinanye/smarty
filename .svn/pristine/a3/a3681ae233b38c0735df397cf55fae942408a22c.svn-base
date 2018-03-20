@@ -1,0 +1,18 @@
+<?php
+class CasesController{
+    private $instanceSa;
+
+    public function __construct()
+    {
+        # code...
+        $this->instanceSa = MySmarty::getInstanceSa();
+    }
+    public function cases()
+    {
+        # code...
+        $info = getModel()->cases();
+        $this->instanceSa->assign("data",$info["data"]);
+        $this->instanceSa->assign("colunms",$info["colunms"]);
+        $this->instanceSa->display("app/index/view/casePanel/cases.html");
+    }
+}

@@ -1,0 +1,107 @@
+<?php
+/* Smarty version 3.1.30, created on 2018-03-17 13:29:10
+  from "D:\wamp64\www\mbkj\app\index\view\casePanel\service.html" */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.30',
+  'unifunc' => 'content_5aad1826d98583_36319306',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '0aad14db6c2ef2258ae79827aca83f7f91baacf1' => 
+    array (
+      0 => 'D:\\wamp64\\www\\mbkj\\app\\index\\view\\casePanel\\service.html',
+      1 => 1521092405,
+      2 => 'file',
+    ),
+    'a54d9e0397f4d31a4fed7ae40eba27a491a84646' => 
+    array (
+      0 => 'D:\\wamp64\\www\\mbkj\\app\\index\\view\\header.html',
+      1 => 1521279100,
+      2 => 'file',
+    ),
+    'bd7061dce54d80932ec93f936dd9c753c977ee3e' => 
+    array (
+      0 => 'D:\\wamp64\\www\\mbkj\\app\\index\\view\\footer.html',
+      1 => 1520747777,
+      2 => 'file',
+    ),
+  ),
+  'cache_lifetime' => 86400,
+),true)) {
+function content_5aad1826d98583_36319306 (Smarty_Internal_Template $_smarty_tpl) {
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>摩博科技</title>
+    <link rel="stylesheet" href="static/css/index/common.css">
+    <link rel="stylesheet" href="static/css/index/other.css">
+    <style>
+        main{
+            margin: auto 4%;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        
+<nav class="nav z-nav">
+    <div class="z-index-nav">
+        <h1 class="z-index-logo">
+            <a href="index.php">
+                <img src="static/img/index/anli_logo.png" alt="">
+            </a>
+        </h1>
+        <ul class="z-index-nav-ul">
+            <li><a href="index.php?c=index&a=index">首页</a></li>
+            <li><a href="index.php?c=index&a=server">服务</a></li>
+            <li><a href="index.php?c=index&a=product">产品</a></li>
+            <li><a href="index.php?c=index&a=cases">案例</a></li>
+            <li><a href="index.php?c=index&a=contact">联系</a></li>
+            <li><a href="index.php?c=index&a=join">加入</a></li>
+            <li><a href="index.php?c=index&a=seek&page=1">咨询</a></li>
+            <li><a href="index.php?c=index&a=pagination&page=1">分页</a></li>
+            <li></li>
+        </ul>
+    </div>
+</nav>
+
+
+    </nav>
+    <main>
+        <div class="service-con">
+                            <h3 style="margin: 0px auto; padding: 0px 10px; font-size: 18px; box-sizing: border-box; font-weight: normal; width: 1200px; line-height: 53px; height: 53px;">O2O解决方案</h3><ul style="list-style-type: none;" class=" list-paddingleft-2"><li><p><a style="margin: 0px; padding: 0px; font-size: 14px; box-sizing: border-box; color: rgb(190, 24, 44); border: 0px; outline: none;">SOHO 3Q</a></p></li><li><p><a style="margin: 0px; padding: 0px; font-size: 14px; box-sizing: border-box; color: rgb(190, 24, 44); border: 0px; outline: none;">210高尔夫（爱玩高尔夫）</a></p></li><li><p><a style="margin: 0px; padding: 0px; font-size: 14px; box-sizing: border-box; color: rgb(190, 24, 44); border: 0px; outline: none;">网票网手机客户端</a></p></li></ul><h4 style="margin: 0px 0px 22px; padding: 0px; font-size: 14px; box-sizing: border-box; font-weight: normal; line-height: 24px; color: rgb(76, 76, 76);">一、O2O概念</h4><h4 style="margin: 0px 0px 22px; padding: 0px; font-size: 14px; box-sizing: border-box; font-weight: normal; line-height: 24px; color: rgb(76, 76, 76);">O2O(Online To Offline)，指将线下的商务机会与互联网结合,让互联网成为线下交易的前台，并用线上社区和服务进一步优化线下服务的体验。</h4><p style="margin-top: 0px; margin-bottom: 22px; padding: 0px; font-size: 14px; box-sizing: border-box; line-height: 24px; color: rgb(76, 76, 76);">所以，其既指线上到线下，也指线下到线上，，在实际项目中，因实际业务需求而有明确的区分。如传统的房产企业、美容连锁店倾向于把线下的业务放到线上来实现。新兴的互联网公司做手机订高尔夫球场、订电影票，则是把线上的业务引流到线下。</p><p><a href="http://www.chinamobo.com/index.php?r=post/default/list&taxonomy=20" style="margin: 0px; padding: 0px; box-sizing: border-box; color: rgb(0, 0, 0); border: 0px; outline: none; text-decoration-line: none !important;"></a></p><h4 style="margin: 0px 0px 22px; padding: 0px; font-size: 14px; box-sizing: border-box; font-weight: normal; line-height: 24px; color: rgb(76, 76, 76);">二、摩博O2O解决方案</h4><p style="margin-top: 0px; margin-bottom: 22px; padding: 0px; font-size: 14px; box-sizing: border-box; line-height: 24px; color: rgb(76, 76, 76);"><img src="/mbkj/static/ueimg/image/20180315/1521091961934650.png"/></p><h4 style="margin: 0px 0px 22px; padding: 0px; font-size: 14px; box-sizing: border-box; font-weight: normal; line-height: 24px; color: rgb(76, 76, 76);">三、摩博科技对O2O的项目实践</h4><p style="margin-top: 0px; margin-bottom: 22px; padding: 0px; font-size: 14px; box-sizing: border-box; line-height: 24px; color: rgb(76, 76, 76);">从早期的移动电子商务，到近期比较热门的O2O移动平台，摩博科技一直在第一线，为地产、建筑、证券、金融、图书、教育、医药、鲜花、电影票、高尔夫订场、心理咨询、营销公司等实施和定制开发了各类O2O移动应用平台。</p><p style="margin-top: 0px; margin-bottom: 22px; padding: 0px; font-size: 14px; box-sizing: border-box; line-height: 24px; color: rgb(76, 76, 76);"><br/></p><p style="margin-top: 0px; margin-bottom: 22px; padding: 0px; font-size: 14px; box-sizing: border-box; line-height: 24px; color: rgb(76, 76, 76);">基于完全自主研发的O2O平台，以及众多行业的项目经验，摩博科技已经帮助SOHO中国等传统领域企业实现向移动互联网的转型，也助帮助爱玩高尔夫等等创业团队快速实现其创业理念！更多信息，请参见我们的相关案例。</p><p class="p-zs" style="margin-top: 55px; margin-bottom: 25px; padding: 0px; box-sizing: border-box; line-height: 24px; color: rgb(26, 26, 26);">软件著作权证书</p><p style="margin-top: 0px; margin-bottom: 22px; padding: 0px; font-size: 14px; box-sizing: border-box; line-height: 24px; color: rgb(76, 76, 76);">摩博科技于2011年9月已开发完成摩博移动电子商务平台，并获得软件著作权（登记号：2012SR052031）。</p><p style="margin-top: 0px; margin-bottom: 22px; padding: 0px; font-size: 14px; box-sizing: border-box; line-height: 24px; color: rgb(76, 76, 76);"><img src="/mbkj/static/ueimg/image/20180315/1521091962158313.png" alt=""/></p><p><br/></p>
+            
+        </div>
+    </main>
+    <footer>
+        <link rel="stylesheet" href="static/css/index/footer.css">
+<footer class="z-footer clearfix">
+    <div class="z-footer-left">
+        <p class="z-footer-c-t">公司简介</p>
+        <p>摩博（北京）科技有限公司作为领先的企业互联网+服务提供商，致力于为企业提供全方位的互联网+技术及运营服务：移动学习平台（魔学院）、O2O平台、移动业务支持系统、互联网+软件定制服务。</p>
+        <p class="z-footer-c-c">摩博科技拥有多项自主知识产权的互联网+服务产品，精通多种互联网+应用平台：LNMP平台、移动App（iOS、Android）、移动Web（HTML5、手机网站）、第三方平台（微信）等平台，摩博科技拥有众多行业的数百个成功案例，客户领域包括教育、地产、汽车、医药、医疗、金融、营销、公关、会展、电商、快消、零售、能源、政府等。</p>
+        <p>摩博科技具有优秀的设计和开发能力、严格的流程和质量控制体系，人员配置完备，可为客户提供商业咨询、需求分析、设计、开发、测试、运维、运营和推广等专业的、高质量的解决方案，帮助客户解决在互联网+的系统建设和运营发展中的诸多问题!</p>
+    </div>
+    <div class="z-footer-center"></div>
+    <div class="z-footer-right">
+        <p>北京海淀区中关村南大街9号理工科技大厦1708</p>
+        <p>销售热线：4006880025</p>
+        <p>电话：010-68944822</p>
+        <p>商务合作：biz@chinamobo.com</p>
+        <p>招聘：jobs@chinamobo.com</p>
+        <p class="z-footer-erweima"><img src="static/img/index/qcode.jpg"></p>
+        <p class="z-footer-teshu">关注摩博公众号</p>
+        <p>Copyright ©2009-2017 ChinaMobo 京ICP备12026024号-1</p>
+    </div>
+</footer>
+    </footer>
+</body>
+</html><?php }
+}

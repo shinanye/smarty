@@ -1,0 +1,95 @@
+{config_load file='config/config.conf'}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{#title#}</title>
+    <link rel="stylesheet" href="static/css/index/common.css">
+    <link rel="stylesheet" href="static/css/index/other.css">
+    <style >
+        .h3-con{
+            margin: 2% 0;
+        }
+        .block{
+            height: 500px;
+            width: 100%;
+            background-color: #000;
+        }
+        .more{
+            width: 250px;
+            height: 40px;
+            margin: 2% auto;
+            text-align: center;
+            background-color: darkcyan;
+            border-radius: 10px;
+            color: white;
+            font:16px/40px "微软雅黑"; 
+        }
+        .more:hover{
+            background-color: cadetblue;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        {include file="app/index/view/header.html"}
+    </nav>
+    <main>
+        <div class="joinUs-banner" style="background: url( static/img/data/20161028/20160729155221_23169.png) no-repeat center; position:relative; height:300px;">
+            <div class="u-banner-p">
+                <p>摩博科技在前瞻技术研究和项目实践中，逐渐形成一整套移动信息化及移动互联网产品。已拥有多项自主知识产权：魔学院（移动学习平台）、O2O平台、移动内容发布系统、移动电子商务平台、移动数据采集系统、移动现场服务系统、移动问卷调查系统、移动互动营销系统、移动会展交互系统等。</p>
+            </div>
+        </div>
+        <div class="service-con">
+            <div class="main">
+                {foreach $data as $item}
+                    <div class="h3-con">
+                        <div class="clearfix u-product-content">
+                            <a href="?c=index&a=product&id={$item['Id']}">
+                                <img src='{$item["coverimg"]}'>
+                                <div>
+                                    <h1>{$item["title"]}</h1>
+                                    <p>{$item["smallcontent"]}</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                {/foreach}
+            </div>
+            <div class="more">
+                更&emsp;多....
+            </div>
+        </div> 
+    </main>
+    <footer>
+        {include file="app/index/view/footer.html"}
+    </footer>
+</body>
+<script src="static/js/node_modules/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript">
+     var page = 1
+    $(".more").on("click",function(){
+       page++;
+       console.log("page----------"+page);
+        $.ajax({
+            type:"get",
+            dataType:"json",
+            url:"?c=index&a=product&page="+page,
+            success:function(data){
+               var main = $(".main");
+               for(var i=0;i<data.length;i++){
+                   var id = data[i]['Id'];
+                    var _div = ' <div class="h3-con"> <div class="clearfix u-product-content"> <a href="?c=index&a=product&id='+id+'"><img src='+data[i]['coverimg']+'> <div><h1>'+data[i]['title']+'</h1><p>'+data[i]['smallcontent']+'</p></div></a></div><div>';
+                    main.append(_div);
+                }
+            },
+            error:function(){
+                $(".more").css("backgroundColor","cadetblue");
+                alert("无更多数据");
+            }
+        });
+    });
+</script>
+</html>

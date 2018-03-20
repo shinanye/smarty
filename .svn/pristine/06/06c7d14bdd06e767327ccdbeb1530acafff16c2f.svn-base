@@ -1,0 +1,17 @@
+<?php
+    class ProductModel{
+        private $db_instance;
+        public function __construct()
+        {
+        $this->db_instance = DBO::getInstance();
+        }
+
+        
+        public function product()
+        {
+            # code...
+            $sql = "SELECT * FROM product";
+            $data = $this->db_instance->inquire($sql);
+            return $data;
+        }
+    }

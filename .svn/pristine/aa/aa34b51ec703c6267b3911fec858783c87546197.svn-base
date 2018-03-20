@@ -1,0 +1,27 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: XHY
+ * Date: 2018/3/11
+ * Time: 16:50
+ */
+class productModel{
+
+    public function insert($title,$smallcontent,$coverimg,$content){
+        $db=db::getInstance();
+//        $db->conn();
+        $time=date("Y-m-d H:i:s",time());
+        $sql="INSERT INTO product(title,smallcontent,coverimg,content,time) VALUES(?,?,?,?,?)";
+        $db->insert($sql,[$title,$smallcontent,$coverimg,$content,$time]);
+        echo "<script>alert('上传成功！');location.href='http://localhost/mbkj/admin.php?c=product&a=product'</script>";
+//        $pre=$db->conn()->prepare($sql);
+//        $pre->execute([$title,$smallcontent,$coverimg,$content]);
+    }
+    public function select(){
+        $db=db::getInstance();
+
+        $sql1="SELECT * FROM product ";
+        $reslut=$db->select($sql1);
+        return $reslut;
+    }
+}

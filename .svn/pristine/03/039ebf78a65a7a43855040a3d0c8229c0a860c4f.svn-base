@@ -1,0 +1,25 @@
+.z-footer{
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1%;
+    background-color:#000;
+    font: 15px/30px "微软雅黑";
+    color: #eee;
+}
+.z-footer>.z-footer-left{
+    width: 50%;
+}
+.z-footer>.z-footer-center{
+    width:2px;
+    height: 90%;
+    background-color:#aaa;
+    margin: 0 2%;
+}
+.z-footer>.z-footer-right{
+    width: 45%;
+}
+.z-footer-c-t{
+    font-size: 16px;
+}

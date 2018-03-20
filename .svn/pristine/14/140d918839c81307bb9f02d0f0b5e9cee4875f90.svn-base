@@ -1,0 +1,14 @@
+<?php
+    class ServerModel{
+        private $db_instance;
+        public function __construct()
+        {
+        $this->db_instance = DBO::getInstance();
+        }
+
+        
+        public function server()
+        {
+            
+        }
+    }

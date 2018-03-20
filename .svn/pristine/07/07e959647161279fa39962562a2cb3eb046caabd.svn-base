@@ -1,0 +1,32 @@
+<?php
+class SeekController{
+  
+    private $instanceSa;
+
+    public function __construct()
+    {
+        # code...
+        $this->instanceSa = MySmarty::getInstanceSa();
+    }
+    
+    public function seek()
+    {
+        # code...
+        $seek = getModel()->seek();
+        if(!isset($_GET["id"])){
+            $this->instanceSa->assign("data",$seek);
+            $this->instanceSa->display("app/index/view/casePanel/seek.html");
+        }else{
+            $id = $_GET["id"];
+            foreach($seek as $item){
+                if($item["Id"]==$id){
+                    $this->instanceSa->assign("title",$item["title"]);
+                    $this->instanceSa->assign("time",$item["issue"]);
+                    $this->instanceSa->assign("content",$item["content"]);
+                }
+            }
+            $this->instanceSa->display("app/index/view/casePanel/consulServer.html");
+        }
+
+    }
+}

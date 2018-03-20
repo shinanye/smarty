@@ -1,0 +1,16 @@
+<?php
+    class ServerModel{
+        private $db_instance;
+        public function __construct()
+        {
+        $this->db_instance = DBO::getInstance();
+        }
+
+        
+        public function server()
+        {
+            $sql = "SELECT * FROM serve";
+            $data = $this->db_instance->inquire($sql);
+            return $data;
+        }
+    }

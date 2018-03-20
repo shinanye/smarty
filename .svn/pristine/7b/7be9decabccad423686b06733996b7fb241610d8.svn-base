@@ -1,0 +1,17 @@
+<?php
+
+require "libs/smarty/Smarty.class.php";
+define('ROOT_PATH',dirname(__FILE__));
+require "app/index/common/mySmarty.php";
+require "app/index/common/common.php";
+
+// $instanceSm = MySmarty::getInstanceSa();
+// $instanceSm->display("app/index/view/casePanel/cases.html");
+// exit;
+$instanceSm = MySmarty::getInstanceSa();
+if(!$_GET){
+    $instanceSm->display("app/index/view/index.html");
+}else{
+    getConntroller();
+}
+

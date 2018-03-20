@@ -1,0 +1,14 @@
+<?php
+class ServerController{
+    private $instanceSa;
+    public function __construct()
+    {
+        $this->instanceSa = MySmarty::getInstanceSa();
+    }
+    public function server()
+    {
+        $data = getModel()->server();//getModel()  IndexMode类的实例化
+        
+        $this->instanceSa->display("app/index/view/casePanel/service.html");
+    }
+}

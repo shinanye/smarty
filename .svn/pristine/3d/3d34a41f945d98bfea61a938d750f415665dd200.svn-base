@@ -1,0 +1,14 @@
+<?php
+
+class IndexController{
+    private $instanceSa;
+    public function __construct()
+    {
+        # code...
+        $this->instanceSa = MySmarty::getInstanceSa();
+    }
+    public function index()
+    {
+        $this->instanceSa->display("app/index/view/index.html");
+    }
+}

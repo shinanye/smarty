@@ -1,0 +1,16 @@
+<?php
+    class SeekModel{
+        private $db_instance;
+        public function __construct()
+        {
+        $this->db_instance = DBO::getInstance();
+        }
+
+    public function seek()
+        {
+            # code...
+            $sql = "SELECT * FROM advisory";
+            $data = $this->db_instance->inquire($sql);
+            return $data;
+        }
+    }

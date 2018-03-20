@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>摩博科技</title>
+    <link rel="stylesheet" href="static/css/index/common.css">
+    <link rel="stylesheet" href="static/css/index/other.css">
+</head>
+<body>
+    <nav>
+        {include file="app/index/view/header.html"}
+    </nav>
+    <main>
+        <div class="casus-con">
+            <div class="casus">
+                <ol class="clearfix">
+                    {foreach $data as $id=>$value}
+                    {if $id eq 0}
+                        <li class="current"><a href="javascript:;">{$value["colunm"]}</a></li>
+                    {else}
+                        <li><a href="javascript:;">{$value["colunm"]}</a></li>
+                    {/if}
+                    {/foreach}
+                </ol>
+            <ul class="casus-ul-con">
+                    {foreach $data as $id=>$value}
+                    {if $id eq 0}
+                        <li class="currents">
+                            <p class="casus-ul-li-tit">
+                                    {$value["content"]}
+                            </p>
+                            <ul class="casus-ul-con-ul clearfix">
+                                {foreach $colunms as $contents}
+                                    {foreach $contents as $content}
+                                        {if $content["Id"] eq $value["Id"]}
+                                        <img src={$content['img']} alt="">
+                                        <!-- <li>
+                                            <a href="javascript:;">
+                                                <img alt="" src=$content['img']>
+                                                <div class="casus-li-posi">
+                                                    {if $content["title"] neq ""}$content["title"]{/if}
+                                                <br>
+                                                $content["content"]
+                                                </div>
+                                            </a>
+                                        </li> -->
+                                        {/if}
+                                    {/foreach}
+                                {/foreach}
+                                
+                            </ul>
+                        </li>
+                    {else}
+                    <li>
+                        <p class="casus-ul-li-tit">
+                            {$value["content"]}
+                        </p>
+                        <ul class="casus-ul-con-ul clearfix">
+                            {foreach $colunms as $contents}
+                                {foreach $contents as $content}
+                                    {if $content["Id"] eq $value["Id"]}
+                                    <li>
+                                        <a href="javascript:;">
+                                            <img alt="" src="$content['img']">
+                                            <div class="casus-li-posi">
+                                                {if $content["title"] neq ""}$content["title"]{/if}
+                                            <br>
+                                            $content["content"]
+                                            </div>
+                                        </a>
+                                    </li>
+                                    {/if}
+                                {/foreach}
+                            {/foreach}
+                        </ul>
+                    </li>
+                    {/if}
+                    {/foreach}
+                </ul>
+            </div>
+        </div>
+    </main>
+    <footer>
+            {include file="app/index/view/footer.html"}
+    </footer>
+</body>
+<script src="static/js/node_modules/jquery/dist/jquery.min.js"></script>
+<script src="static/js/main/cover.js"></script>
+<script type="text/javascript">
+    // 案例导航点击效果
+    $(".casus ol li ").hover(function(){
+        $(this).addClass("current").siblings().removeClass("current");
+        var n_li = $(this).index();
+        console.log(n_li)
+        $(".casus-ul-con > li:eq("+ n_li +")").addClass("currents").siblings().removeClass("currents");
+    });
+</script>
+</html>

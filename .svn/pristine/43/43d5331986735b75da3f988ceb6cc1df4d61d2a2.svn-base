@@ -1,0 +1,35 @@
+<?php
+class ProductController extends Controller{
+    private $url = null;
+
+    public function product()
+    {
+       
+        $this->url = "app/index/view/casePanel/product.html";
+        $data = $this->model->paginFormation(2);
+
+        if(!$this->instanceSa->isCached($this->url,$_SERVER["REQUEST_URI"])){
+            //无缓存文件执行代码
+            // $data = getModel()->product();
+           
+            if(!isset($_GET["id"])){
+                if(isset($_GET["page"])){
+                    //ajax
+                    $offset=($_GET["page"]-1)*2;
+                    $data = $this->model->paginFormation(2,$offset);
+                    return $data;
+                }
+            }else{
+                $id = $_GET["id"];
+                foreach($data as $item){
+                    if($item["Id"]==$id){
+                        $details = new DetailsController( $this->instanceSa, $this->model);
+                        $details->details("product",$id);
+                    }
+                }
+            }
+        }else{
+            $this->instanceSa->display($this->url,$_SERVER["REQUEST_URI"]);
+        }
+    }
+}

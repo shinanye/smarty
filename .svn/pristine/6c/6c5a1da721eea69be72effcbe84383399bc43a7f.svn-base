@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>mbkj</title>
+    <link href="static/js/node_modules/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/public.css">
+</head>
+<body>
+{include file="app/admin/view/public/public.html"}
+<div class="col-xs-9 col-md-10">
+    <ol class="breadcrumb">
+        <li><span class="glyphicon glyphicon-tag"></span><a href="#">案例信息管理</a></li>
+        <!--<li class="active">产品列表</li>-->
+    </ol>
+    <form  action="http://localhost/mbkj/admin.php?c=case&a=in_cinsert" class="form-horizontal" method="post" enctype="multipart/form-data">
+        <input type="hidden" name="MAX_FILE_SIZE" value="1000000000"/>
+        <input type="hidden" name="Id" value="{$eId}">
+        <div class="form-group">
+            <label class="col-md-2 control-label">案例分类</label>
+            <div class="col-md-6">
+                <select class="form-control" name="select">
+                    <option disabled="disabled">请选择要添加的案例分类</option>
+                    {foreach $case_name as $item}
+                    {if $item["Id"] eq $Id}
+                    <option value='{$item["Id"]}' selected>{$item["colunm"]}</option>
+                    {else}
+                    <option value='{$item["Id"]}'>{$item["colunm"]}</option>
+                    {/if}
+
+                    {foreachelse}
+                    <option>不存在案例分类</option>
+                    {/foreach}
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-2 control-label">案例名称</label>
+            <div class="col-md-6">
+                <input type="text" class="form-control" name="title" placeholder="可以为空" value="{$title}">
+                <div class="error"></div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-2 control-label">案例内容</label>
+            <div class="col-md-6">
+                <input type="text" class="form-control" name="content" value="{$content}">
+                <div class="error"></div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-2 control-label">案例图片</label>
+            <div class="col-md-6">
+                <input type="file"  name="coverimg">
+                <img id="cover" src="{$img}" style="height: 50px;width: 50px;">
+                <input type="hidden" name="old_url" value="{$coverimg}">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-2 control-label"></label>
+            <div class="col-md-8">
+                <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span>提交</button>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="clear"></div>
+</body>
+<script src="static/js/node_modules/jquery/dist/jquery.min.js"></script>
+<script src="static/js/node_modules/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+<script>
+    $().ready(function(){
+        var hei=$(window).height();
+        $(".sidebar").css("height",hei-60+"px");
+    });
+    $("input[type='file']").change(function(){
+        var imgFile=this.files.item(0);
+        var _url=window.URL.createObjectURL(imgFile);
+        $("#cover").attr("src",_url);
+//        console.log($(this).val());
+    })
+</script>
+</html>
+

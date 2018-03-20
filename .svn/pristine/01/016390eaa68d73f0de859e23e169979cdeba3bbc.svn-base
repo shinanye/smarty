@@ -1,0 +1,132 @@
+.navbar{
+    background-color: #3A3E4A;
+    border-radius: inherit;
+    border: none;
+    height:60px;
+    line-height: 80px;
+    margin: 0;
+}
+.navbar-header a{
+    font-size: 20px;
+    font-weight: bold;
+}
+.navbar a{
+    color: white !important;
+}
+.sidebar{
+    margin: 0;
+    padding: 0;
+    width:204px;
+    background-color: #3A3E4A !important;
+}
+.sidebar span{
+    padding-right: 7px;
+}
+.sidebar li a:hover{
+    background-color:#333333;
+}
+.sidebar li a{
+    color: white;
+}
+.clear{
+    clear: both;
+}
+.panel{
+    width:45%;
+    margin:1%;
+    float: left;
+}
+.panel .panel-heading span{
+    font-size: 50px;
+}
+.dataTitle{
+    float: right;
+}
+.dataTitle p{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+.loginCount .panel-heading{
+    background: #6ea5dd;
+    color: #FFFFFF;
+}
+.loginCount .rightClick,.loginCount .panel-body a{
+    color: #6ea5dd;
+}
+.loginCount{
+    border-color:#6ea5dd;
+}
+.articleCount .panel-heading{
+    background: #5bba5b;
+    color: #FFFFFF;
+}
+.articleCount .rightClick,.articleCount .panel-body a{
+    color: #5bba5b;
+}
+.articleCount{
+    border-color:#5bba5b;
+}
+.maxRead .panel-heading{
+    background: #f7ae4b;
+    color: #FFFFFF;
+}
+.maxRead .rightClick,.maxRead .panel-body a{
+    color: #f7ae4b;
+}
+.maxRead{
+    border-color:#f7ae4b;
+}
+.recommendCount .panel-heading{
+    background: #de524b;
+    color: #FFFFFF;
+}
+.recommendCount .rightClick,.recommendCount .panel-body a{
+    color: #de524b;
+}
+.recommendCount{
+    border-color:#de524b;
+}
+.rightClick{
+    float: right;
+}
+.addMenu{
+    margin: 5px;
+}
+table{
+    margin-top: 10px;
+}
+table tr th,tr td{
+    text-align: center;
+}
+.menuOrder,.contentOrder{
+    width:10%;
+}
+.menuOrder input,.contentOrder input{
+    width:40%;
+    text-align: center;
+}
+ol{
+    margin-top: 10px;
+}
+.updateAndPush{
+    margin: 10px 0px;
+}
+.page-group{
+    text-align: center;
+}
+.configure{
+    margin:10px 0px;
+}
+.view{
+    width:100%;
+}
+.view p{
+    width:100%;
+}
+.view img{
+    width:100%;
+}
+label{
+    text-align:right;
+}

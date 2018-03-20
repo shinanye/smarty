@@ -1,0 +1,108 @@
+<?php
+/* Smarty version 3.1.30, created on 2018-03-11 09:36:59
+  from "D:\wamp64\www\project\mbkj\app\index\view\casePanel\product.html" */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.30',
+  'unifunc' => 'content_5aa4f8bb8215c5_45107073',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '3b706e825ade5b28840ecfc6826ee6de0e94a4be' => 
+    array (
+      0 => 'D:\\wamp64\\www\\project\\mbkj\\app\\index\\view\\casePanel\\product.html',
+      1 => 1520761016,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+    'file:app/index/view/header.html' => 1,
+    'file:app/index/view/footer.html' => 1,
+  ),
+),false)) {
+function content_5aa4f8bb8215c5_45107073 (Smarty_Internal_Template $_smarty_tpl) {
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>摩博科技</title>
+    <link rel="stylesheet" href="static/css/index/common.css">
+    <link rel="stylesheet" href="static/css/index/other.css">
+</head>
+<body>
+    <nav>
+        <?php $_smarty_tpl->_subTemplateRender("file:app/index/view/header.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+
+    </nav>
+    <main>
+        <div class="joinUs-banner" style="background: url( static/img/data/20161028/20160729155221_23169.png) no-repeat center; position:relative; height:300px;">
+            <div class="u-banner-p">
+                <p>摩博科技在前瞻技术研究和项目实践中，逐渐形成一整套移动信息化及移动互联网产品。已拥有多项自主知识产权：魔学院（移动学习平台）、O2O平台、移动内容发布系统、移动电子商务平台、移动数据采集系统、移动现场服务系统、移动问卷调查系统、移动互动营销系统、移动会展交互系统等。</p>
+            </div>
+        </div>
+        <div class="service-con">
+            <main class="main">
+            <div class="h3-con">
+                <div class="clearfix u-product-content">
+                    <a href="/index.php?r=post/default/list&amp;taxonomy=56&amp;id=54">
+                        <img src="data/attachment/20170307/20170307160646_82626.png">
+                <div>
+                <h1>魔学院：企业移动学习平台</h1>
+                <p>魔学院：是摩博科技倾力打造的企业移动学习平台，采用云技术架构 — 您只需要注册一个账户即为您的企业搭建了一个完整的企业培训平台：课程指派、测评指派、员工管理、学习统计管理、社区管理等功能；而学习的方式全面移动化，支持App（Android和iOS）、微信、企业号、平板等，让员工充分利用碎片时间提升业务能力。同时，我们和众多培训机构合作，让您购买企业培训课件和指派学习都在一个系统中完成！ 我们的愿望：每一个企业都是一个大学</p></div></a></div></div><div class="h3-con"><div class="clearfix u-product-content">
+                    <a href="/index.php?r=post/default/list&amp;taxonomy=56&amp;id=55">
+                        <img src="data/attachment/20170307/20170307160909_18182.jpg">
+                    <div>
+                        <h1>魔多客服务业互联网+云平台<br></h1>
+                        <p><br>魔多客帮助企业实现线下实体店与互联网相结合，以到店服务、到家服务为核心，为服务型企业提供全渠道O2O解决方案。企业借助“魔多客”平台，打造属于自己品牌的服务号、企业号、小程序、手机网站和APP，为客户提供更好的服务，全面提升客户体验。</p>
+                    </div>
+                    </a>
+                </div>
+            </div>
+        <div class="h3-con">
+            <div class="clearfix u-product-content">
+                <a href="/index.php?r=post/default/list&amp;taxonomy=56&amp;id=78">
+                    <img src="data/attachment/20170307/20170307173417_67874.png">
+                    <div>
+                        <h1>移动数据采集系统</h1>
+                        <p>本系统用智能手机结合移动通信网络，帮助一线人员实时获取任务信息，按照标准化的工作流程，快速执行采集任务的填报工作，完成对生活必需品价格信息的采集和实时传递，保证采集任务的快速构建和及时传输、摆脱地域性和网络资源设备的限制，实现精确、快捷、高效、可视化的数据采集模式。基本功能包括签到、查看待办任务、照片及数据信息采集、排班、查询、绩效、消息推送、下单等。技术特点GPS采集，拍照、音视频采集，条形码、二维码采集，移动下单，消息推送应用领域应用领域：销售采集&nbsp;&nbsp;店面巡检&nbsp;</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="h3-con">
+            <div class="clearfix u-product-content">
+                <a href="/index.php?r=post/default/list&amp;taxonomy=56&amp;id=79">
+                    <img src="data/attachment/20170308/20170308162648_12634.jpg">
+                    <div>
+                        <h1>移动电子商务系统</h1>
+                        <p>移动电子商务系统</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="h3-con">
+            <div class="clearfix u-product-content">
+                <a href="/index.php?r=post/default/list&amp;taxonomy=56&amp;id=80">
+                    <img src="data/attachment/20170307/20170307173357_34836.jpg">
+                    <div>
+                        <h1>移动内容发布系统</h1>
+                        <p>MIPS(Mobile Information Pushing System)是摩博(北京)科技有限公司自主研发的移动信息发布系统，可将各种信息快速、准确、有效、完整、及时地推送到指定人员的智能终端上</p></div></a></div></div><a href="/index.php?r=post/default/list&amp;taxonomy=56&amp;id=80">    
+                        </a>
+                    </main>
+            <a href="/index.php?r=post/default/list&amp;taxonomy=56&amp;id=80"></a>
+        </div>
+    </main>
+    <footer>
+        <?php $_smarty_tpl->_subTemplateRender("file:app/index/view/footer.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+
+    </footer>
+</body>
+</html><?php }
+}

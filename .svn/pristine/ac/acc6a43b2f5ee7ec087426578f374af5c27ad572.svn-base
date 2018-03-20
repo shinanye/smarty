@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>摩博科技</title>
+    <link rel="stylesheet" href="static/css/index/common.css">
+    <link rel="stylesheet" href="static/css/index/other.css">
+    <style>
+        .read{
+            float: right;
+            margin: 2% 0;
+            color: #aaa;
+        }
+        .read span{
+            color: red;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        {include file="app/index/view/header.html"}
+    </nav>
+    <div class='joinUs-banner' style='background: url(static/img/data/20160802/20160802135948_90702.png ) no-repeat center; position:relative; height:300px;'></div>
+            
+    <main>
+        <div class="consult-content">
+            <div class="consult-content-in">
+                {foreach $data as $id=>$contents}
+                    {if $id eq 0}
+                    <a href="index.php?c=index&a=seek&id={$contents['Id']}">
+                        <div class="consult-list clearfix">
+                            <img src={$contents['coverimg']} style="width:270px;height:180px;">
+                            <div class="list-right">
+                                <h1>【喜讯】{$contents['title']}</h1>
+                                <p>
+                                    {$contents['smalltitle']}
+                                </p>
+                                <ul>
+                                    <li>发布时间：{$contents['issue']} </li>
+                                    <li>阅读全文</li>
+                                </ul>
+                                <br>
+                                <div class="read">
+                                    阅读量：<span>{$contents['readnum']}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    {else}
+                    <a href="index.php?c=index&a=seek&id={$contents['Id']}">
+                        <div class="consult-list clearfix">
+                            <img src={$contents['coverimg']} style="width:270px;height:180px;">
+                            <div class="list-right">
+                                <h1>{$contents['title']}</h1>
+                                <p>
+                                    {$contents['smalltitle']}
+                                </p>
+                                <ul>
+                                    <li>发布时间：{$contents['issue']} </li>
+                                    <li>阅读全文</li>
+                                </ul>
+                                <br>
+                                <div class="read">
+                                    阅读量：<span> {$contents['readnum']}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    {/if}
+                {/foreach}
+            </div>      
+        </div>
+    </main>
+    <footer>
+            {include file="app/index/view/footer.html"}
+    </footer>
+</body>
+</html>

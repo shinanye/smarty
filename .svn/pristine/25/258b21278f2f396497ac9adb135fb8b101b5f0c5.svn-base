@@ -1,0 +1,20 @@
+<?php
+class CasesController{
+    private $instanceSa;
+
+    public function __construct()
+    {
+        # code...
+        $this->instanceSa = MySmarty::getInstanceSa();
+    }
+    public function cases()
+    {
+        # code...
+        if(!$this->instanceSa->isCached("app/index/view/casePanel/cases.html",$_SERVER["REQUEST_URI"])){
+        $info = getModel()->cases();
+        $this->instanceSa->assign("data",$info["data"]);
+        $this->instanceSa->assign("colunms",$info["colunms"]);
+        }
+        $this->instanceSa->display("app/index/view/casePanel/cases.html",$_SERVER["REQUEST_URI"]);
+    }
+}

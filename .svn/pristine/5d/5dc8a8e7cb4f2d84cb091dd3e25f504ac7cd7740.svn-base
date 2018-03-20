@@ -1,0 +1,62 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: XHY
+ * Date: 2018/3/13
+ * Time: 17:03
+ */
+class advisoryModel{
+    private static $instance;
+    public static function getInstance(){
+        if(!self::$instance){
+            self::$instance=new advisoryModel();;
+        }
+        return self::$instance;
+    }
+
+    public function insert($title,$smallcontent,$coverimg,$content){
+        $db=db::getInstance();
+        $time=date("Y-m-d H:i:s",time());
+        $issue=date("Y-m-d",time());
+        $timeArr=explode("-",$issue);
+        $issue=$timeArr[0]."年".$timeArr[1]."月".$timeArr[2]."日";
+//        exit;
+        $sql="INSERT INTO advisory(title,coverimg,smalltitle,time,content,issue) VALUES(?,?,?,?,?,?)";
+        $result=$db->insert($sql,[$title,$coverimg,$smallcontent,$time,$content,$issue]);
+        if($result){
+            echo "<script>alert('上传成功！');location.href='http://localhost/mbkj/admin.php?c=advisory&a=advisory'</script>";
+        }else{
+            echo "<script>alert('上传失败！');location.href='http://localhost/mbkj/admin.php?c=advisory&a=add'</script>";
+        }
+    }
+    public function select($Id=''){
+        $db=db::getInstance();
+        $sql1=boolval($Id)==true?"SELECT * FROM advisory WHERE Id=?":"SELECT * FROM advisory ";
+//            $sql1="SELECT * FROM product ";
+        $reslut=$db->select($sql1,[$Id]);
+        return $reslut;
+    }
+
+    public function change($title,$smallcontent,$coverimg,$content,$Id){
+        $db=db::getInstance();
+        $time=date("Y-m-d H:i:s",time());
+        $sql="UPDATE advisory SET title='$title',smalltitle ='$smallcontent',coverimg='$coverimg',content='$content',time='$time' WHERE Id=?";
+        $result=$db->change($sql,[$Id]);
+        if($result){
+            echo "<script>alert('修改成功！');location.href='http://localhost/mbkj/admin.php?c=advisory&a=advisory'</script>";
+        }else{
+            echo "<script>alert('修改失败！');location.href='http://localhost/mbkj/admin.php?c=advisory&a=advisory'</script>";
+        }
+    }
+
+    public function delete($Id){
+        $db=db::getInstance();
+        $sql="DELETE FROM advisory WHERE id=?";
+        $result=$db->delete($sql,[$Id]);
+        if($result){
+            echo "<script>alert('删除成功！');location.href='http://localhost/mbkj/admin.php?c=advisory&a=advisory'</script>";
+        }else{
+            echo "<script>alert('删除失败！');location.href='http://localhost/mbkj/admin.php?c=advisory&a=advisory'</script>";
+        }
+    }
+}

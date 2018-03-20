@@ -1,0 +1,29 @@
+<?php
+class ProductController{
+    private $instanceSa;
+
+    public function __construct()
+    {
+        # code...
+        $this->instanceSa = MySmarty::getInstanceSa();
+    }
+    public function product()
+    {
+        $data = getModel()->product();
+        $this->instanceSa->assign("data",$data);
+        if(!isset($_GET["id"])){
+            $this->instanceSa->assign("data",$data);
+            $this->instanceSa->display("app/index/view/casePanel/product.html");
+            
+        }else{
+            $id = $_GET["id"];
+            foreach($data as $item){
+                if($item["Id"]==$id){
+                    $this->instanceSa->assign("title",$item["title"]);
+                    $this->instanceSa->assign("content",$item["content"]);
+                }
+            }
+            $this->instanceSa->display("app/index/view/casePanel/details.html");
+        }
+    }
+}

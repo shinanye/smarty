@@ -1,0 +1,131 @@
+﻿# Host: localhost  (Version: 5.5.40)
+# Date: 2018-03-10 15:46:20
+# Generator: MySQL-Front 5.3  (Build 4.120)
+
+/*!40101 SET NAMES utf8 */;
+
+#
+# Structure for table "advisory"
+#
+
+DROP TABLE IF EXISTS `advisory`;
+CREATE TABLE `advisory` (
+  `Id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) NOT NULL DEFAULT '',
+  `coverimg` varchar(255) NOT NULL DEFAULT '',
+  `smalltitle` text NOT NULL,
+  `time` date NOT NULL DEFAULT '1970-01-01',
+  `content` varchar(255) NOT NULL DEFAULT '',
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COMMENT='资讯表';
+
+#
+# Data for table "advisory"
+#
+
+
+#
+# Structure for table "advisory_content"
+#
+
+DROP TABLE IF EXISTS `advisory_content`;
+CREATE TABLE `advisory_content` (
+  `Id` int(11) NOT NULL AUTO_INCREMENT,
+  `content` text NOT NULL,
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='资讯内容';
+
+#
+# Data for table "advisory_content"
+#
+
+
+#
+# Structure for table "case"
+#
+
+DROP TABLE IF EXISTS `case`;
+CREATE TABLE `case` (
+  `Id` int(11) NOT NULL AUTO_INCREMENT,
+  `colunm` varchar(20) NOT NULL DEFAULT '',
+  `content` text NOT NULL,
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='案例表';
+
+#
+# Data for table "case"
+#
+
+
+#
+# Structure for table "case_information"
+#
+
+DROP TABLE IF EXISTS `case_information`;
+CREATE TABLE `case_information` (
+  `Id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) NOT NULL DEFAULT '',
+  `content` text NOT NULL,
+  `img` varchar(255) NOT NULL DEFAULT '',
+  `colunm_id` varchar(255) NOT NULL DEFAULT '',
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='案例详细信息表';
+
+#
+# Data for table "case_information"
+#
+
+
+#
+# Structure for table "manager"
+#
+
+DROP TABLE IF EXISTS `manager`;
+CREATE TABLE `manager` (
+  `Id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(20) NOT NULL DEFAULT '',
+  `password` varchar(12) NOT NULL DEFAULT '',
+  `email` varchar(255) NOT NULL DEFAULT '',
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='后台管理员';
+
+#
+# Data for table "manager"
+#
+
+
+#
+# Structure for table "product"
+#
+
+DROP TABLE IF EXISTS `product`;
+CREATE TABLE `product` (
+  `Id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` tinytext NOT NULL,
+  `smallcontent` text NOT NULL,
+  `coverimg` varchar(255) NOT NULL DEFAULT '',
+  `content` varchar(255) NOT NULL DEFAULT '' COMMENT '文本内容',
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+#
+# Data for table "product"
+#
+
+
+#
+# Structure for table "product_content"
+#
+
+DROP TABLE IF EXISTS `product_content`;
+CREATE TABLE `product_content` (
+  `Id` int(11) NOT NULL AUTO_INCREMENT,
+  `imgarr` text NOT NULL,
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COMMENT='产品内容图片';
+
+#
+# Data for table "product_content"
+#
+
+INSERT INTO `product_content` VALUES (1,'qwewqqwewqw');

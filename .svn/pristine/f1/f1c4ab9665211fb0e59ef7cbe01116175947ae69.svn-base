@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>mbkj</title>
+    <link href="static/js/node_modules/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/public.css">
+</head>
+<body>
+{include file="app/admin/view/public/public.html"}
+<div class="col-xs-9 col-md-10">
+    <ol class="breadcrumb">
+        <li><span class="glyphicon glyphicon-tag"></span><a href="#">案例栏目管理</a></li>
+        <!--<li class="active">产品列表</li>-->
+    </ol>
+    <div class="col-lg-2">
+        <a href="http://localhost/mbkj/admin.php?c=case&a=add"><button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span>添加案例</button></a>
+    </div>
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th>id</th>
+            <th>排序</th>
+            <th>案例名</th>
+            <th>上传时间</th>
+            <th>状态</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        {foreach $caseArr as $key=>$item}
+        <tr>
+            <th scope="row">{$item["Id"]}</th>
+            <td>{$key+1}</td>
+            <td>{$item["colunm"]}</td>
+            <td>{$item["time"]}</td>
+            <td>
+                {if $item["status"] eq "0"}
+                    关闭
+                {else}
+                    开启
+                {/if}
+            </td>
+            <td><a href='http://localhost/mbkj/admin.php?c=case&a=change&Id={$item["Id"]}' class="btn btn-primary"><span class="glyphicon glyphicon-edit"></span></a><a href='http://localhost/mbkj/admin.php?c=case&a=delete&Id={$item["Id"]}' class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></a></td>
+        </tr>
+        {/foreach}
+        </tbody>
+    </table>
+    <nav aria-label="Page navigation" style="text-align: center">
+        <ul class="pagination" >
+            <li>
+                {if $page eq "1"}
+                <a href="http://localhost/mbkj/admin.php?c=case&a=case1&page=1" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+                {else}
+                <a href="http://localhost/mbkj/admin.php?c=case&a=case1&page={$page-1}" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+                {/if}
+            </li>
+
+
+            {foreach $pageArr as $item}
+            {if $item eq $page-1}
+            <li><a style="background-color: #1b6d85" href="http://localhost/mbkj/admin.php?c=case&a=case1&page={$item+1}">{$item+1}</a></li>
+            {else}
+            <li><a href="http://localhost/mbkj/admin.php?c=case&a=case1&page={$item+1}">{$item+1}</a></li>
+            {/if}
+            {/foreach}
+
+
+            <li>
+                {if $page eq count($pageArr)}
+                <a href="http://localhost/mbkj/admin.php?c=case&a=case1&page={count($pageArr)}" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+                {else}
+                <a href="http://localhost/mbkj/admin.php?c=case&a=case1&page={$page+1}" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+                {/if}
+            </li>
+        </ul>
+    </nav>
+</div>
+<div class="clear"></div>
+</body>
+<script src="static/js/node_modules/jquery/dist/jquery.min.js"></script>
+<script src="static/js/node_modules/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+<script>
+    var doc=document.getElementsByClassName("case")[0];
+    doc.setAttribute("style","background-color:black");
+    $().ready(function(){
+        var hei=$(window).height();
+        $(".sidebar").css("height",hei-60+"px");
+    });
+
+</script>
+</html>
+

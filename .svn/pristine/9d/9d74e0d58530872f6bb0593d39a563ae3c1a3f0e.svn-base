@@ -1,0 +1,36 @@
+<?php
+require "app/index/common/Dbo.class.php";
+class IndexModel{
+   
+    public function server()
+    {
+        # code...
+        $db_instance = DBO::getInstance();
+        $sql = "SELECT * FROM product";
+        $data = $db_instance->inquire($sql);
+        return $data;
+    }
+    public function product()
+    {
+        # code...
+    
+    }
+
+    public function cases()
+    {
+        # code...
+      
+    }
+
+    public function contact()
+    {
+        # code...
+      
+    }
+
+    public function join()
+    {
+        # code...
+       
+    }
+}

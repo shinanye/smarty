@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>mbkj</title>
+    <link href="static/js/node_modules/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/public.css">
+</head>
+<body>
+{include file="app/admin/view/public/public.html"}
+<h1>add</h1>
+<div class="col-xs-9 col-md-10">
+    <ol class="breadcrumb">
+        <li><span class="glyphicon glyphicon-tag"></span><a href="#">案例栏目管理</a></li>
+        <!--<li class="active">产品列表</li>-->
+    </ol>
+    <form  action="http://localhost/mbkj/admin.php?c=case&a=insert" class="form-horizontal" method="post">
+        <div class="form-group">
+            <label class="col-md-2 control-label">案例名</label>
+            <div class="col-md-6">
+                <input type="text" class="form-control" name="title">
+                <div class="error"></div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-2 control-label">案例介绍</label>
+            <div class="col-md-6">
+                <input type="text" class="form-control" name="content">
+                <div class="error"></div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-2 control-label">状态</label>
+            <div class="col-md-8">
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="status" id="Radios1" value="1" checked="">
+                        开启
+                    </label>
+                    <label>
+                        <input type="radio" name="status" id="Radios2" value="0">
+                        关闭
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-2 control-label"></label>
+            <div class="col-md-8">
+                <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span>提交</button>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="clear"></div>
+</body>
+<script src="static/js/node_modules/jquery/dist/jquery.min.js"></script>
+<script src="static/js/node_modules/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+<script>
+    $().ready(function(){
+        var hei=$(window).height();
+        $(".sidebar").css("height",hei-60+"px");
+    });
+
+</script>
+</html>
+

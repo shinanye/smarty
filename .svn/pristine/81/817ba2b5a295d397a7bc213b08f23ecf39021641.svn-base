@@ -1,0 +1,37 @@
+<?php
+class SeekController{
+  
+    private $instanceSa;
+    private $url = null;
+    public function __construct()
+    {
+        # code...
+        $this->instanceSa = MySmarty::getInstanceSa();
+    }
+    
+    public function seek()
+    {
+        # code...
+        if(!$this->instanceSa->isCached("app/index/view/casePanel/seek.html",$_SERVER["REQUEST_URI"])){
+            //无缓存文件执行代码
+
+            $seek = getModel()->seek();
+            if(!isset($_GET["id"])){
+                $this->instanceSa->assign("data",$seek);
+
+                $this->url="app/index/view/casePanel/seek.html";
+            }else{
+                $id = $_GET["id"];
+                foreach($seek as $item){
+                    if($item["Id"]==$id){
+                        $this->instanceSa->assign("title",$item["title"]);
+                        $this->instanceSa->assign("time",$item["issue"]);
+                        $this->instanceSa->assign("content",$item["content"]);
+                    }
+                }
+                $this->url="app/index/view/casePanel/consulServer.html";
+            }
+        }
+        $this->instanceSa->display($this->url,$_SERVER["REQUEST_URI"]);
+    }
+}

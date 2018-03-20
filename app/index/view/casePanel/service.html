@@ -1,0 +1,32 @@
+{config_load file='config/config.conf'}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{#title#}</title>
+    <link rel="stylesheet" href="static/css/index/common.css">
+    <link rel="stylesheet" href="static/css/index/other.css">
+    <style>
+        main{
+            margin: auto 4%;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        {include file="app/index/view/header.html"}
+    </nav>
+    <main>
+        <div class="service-con">
+            {foreach $data as $item}
+                {$item["content"]}
+            {/foreach}
+        </div>
+    </main>
+    <footer>
+        {include file="app/index/view/footer.html"}
+    </footer>
+</body>
+</html>

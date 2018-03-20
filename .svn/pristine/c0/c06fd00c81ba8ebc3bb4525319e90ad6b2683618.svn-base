@@ -1,0 +1,14 @@
+<?php
+class ContactController{
+    private $instanceSa;
+    public function __construct()
+    {
+        # code...
+        $this->instanceSa = MySmarty::getInstanceSa();
+    }
+    public function contact()
+    {
+        # code...
+        $this->instanceSa->display("app/index/view/casePanel/contact.html");
+    }
+}

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>mbkj</title>
+    <link href="static/js/node_modules/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/public.css">
+    <style>
+        table img{
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+{include file="app/admin/view/public/public.html"}
+<div class="col-xs-9 col-md-10">
+    <ol class="breadcrumb">
+        <li><span class="glyphicon glyphicon-tag"></span><a href="#">产品管理</a></li>
+        <li class="active">产品列表</li>
+    </ol>
+    <div class="col-lg-2">
+        <a href="http://localhost/mbkj/admin.php?c=product&a=add"><button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span>添加产品</button></a>
+    </div>
+</div>
+
+</body>
+<script src="static/js/node_modules/jquery/dist/jquery.min.js"></script>
+<script src="static/js/node_modules/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+<script>
+    $().ready(function(){
+        var hei=$(window).height();
+        $(".sidebar").css("height",hei-60+"px");
+    });
+    //    $(".ding").click(function(){
+    //        location.href='http://localhost/mbkj/admin.php?c=product&a=delete&Id={$item["Id"]}';
+    //    })
+</script>
+</html>

@@ -1,0 +1,37 @@
+<?php
+class ProductController{
+    private $instanceSa;
+    private $url = null;
+    public function __construct()
+    {
+        # code...
+        $this->instanceSa = MySmarty::getInstanceSa();
+    }
+    public function product()
+    {
+        if(!$this->instanceSa->isCached("app/index/view/casePanel/product.html",$_SERVER["REQUEST_URI"])){
+            //无缓存文件执行代码
+            $data = getModel()->product();
+            if(!isset($_GET["id"])){
+                $this->instanceSa->assign("data",$data);
+
+                $this->url = "app/index/view/casePanel/product.html";
+                echo $this->url;
+            }else{
+                $id = $_GET["id"];
+                foreach($data as $item){
+                    if($item["Id"]==$id){
+                        $details = new DetailsController();
+                        $this->url = $details->details("product",$id);
+                        echo $this->url;
+                    }
+                }
+            }
+
+        }
+        echo "nnnnn<br>";
+        var_dump($this->url);
+        exit;
+        $this->instanceSa->display($this->url,$_SERVER["REQUEST_URI"]);
+    }
+}

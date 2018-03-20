@@ -1,0 +1,125 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: XHY
+ * Date: 2018/3/13
+ * Time: 17:02
+ */
+class advisoryController{
+    public function advisory(){
+        $page=$_GET["page"];
+        $model=advisoryModel::getInstance();
+        $result=$model->select($Id="",$page1=$page);
+        $pageArr=array();
+        for($i=0;$i<$result[1];$i++){
+            array_push($pageArr,$i);
+        }
+//        print_r($result);
+        $tpl=Mysmarty::getInstance();
+        $tpl->assign("sqlArr",$result[0]);
+        $tpl->assign("pageArr",$pageArr);
+        $tpl->assign("page",$page);
+        $tpl->display("advisory/advisory.html");
+
+    }
+
+    public function add(){
+
+        $tpl=Mysmarty::getInstance();
+        $tpl->display("advisory/addadvisory.html");
+    }
+
+    public function insert(){
+        if(!isset($_POST["content"])||!boolval($_POST["title"])||!boolval($_POST["smallcontent"])){
+            echo "<script>alert('上传失败！');location.href='http://localhost/mbkj/admin.php?c=advisory&a=add'</script>";
+            exit;
+        }
+        $name=$_FILES["coverimg"]["name"];
+        if($name){
+            $error=$_FILES["coverimg"]["error"];
+            if($error==1||$error==2){
+                echo"<script>alert('文件过大');location.href='http://localhost/mbkj/admin.php?c=advisory&a=add'</script>";
+            }
+            if (is_uploaded_file($_FILES["coverimg"]["tmp_name"])) {
+                $_url="static/dbimg/"."pic".time().".png";
+                if(!move_uploaded_file($_FILES["coverimg"]["tmp_name"],$_url)){
+                    echo "<script>alert('移动失败');location.href='http://localhost/mbkj/admin.php?c=advisory&a=add'</script>";
+                }
+            }
+        }else{
+            echo "<script>alert('文件上传失败！');location.href='http://localhost/mbkj/admin.php?c=advisory&a=add'</script>";
+            exit;
+        }
+        $title=$_POST["title"];
+        $smalltitle=$_POST["smallcontent"];
+        $content=$_POST["content"];
+
+
+        $model=advisoryModel::getInstance();
+        $model->insert($title,$smalltitle,$_url,$content);
+
+
+    }
+//    改
+    public function cinsert(){
+        if(!isset($_POST["content"])||!boolval($_POST["title"])||!boolval($_POST["smallcontent"])){
+            echo "<script>alert('上传失败！');location.href='http://localhost/mbkj/admin.php?c=product&a=product'</script>";
+            exit;
+        }
+        $name=$_FILES["coverimg"]["name"];
+        if($name){
+            $error=$_FILES["coverimg"]["error"];
+            if($error==1||$error==2){
+                echo"<script>alert('文件过大');location.href='http://localhost/mbkj/admin.php?c=product&a=product'</script>";
+            }
+            if (is_uploaded_file($_FILES["coverimg"]["tmp_name"])) {
+                $_url="static/dbimg/"."pic".time().".png";
+                if(!move_uploaded_file($_FILES["coverimg"]["tmp_name"],$_url)){
+                    echo "<script>alert('移动失败');location.href='http://localhost/mbkj/admin.php?c=product&a=product'</script>";
+                }else{
+                    $re=unlink($_POST["old_url"]);
+//                    var_dump($re);
+//                    exit;
+                }
+            }
+        }else{
+            $_url=$_POST["old_url"];
+        }
+//        echo "ppp";
+        $title=$_POST["title"];
+        $smalltitle=$_POST["smallcontent"];
+        $content=$_POST["content"];
+        $Id=$_POST["Id"];
+//        exit;
+        $model=advisoryModel::getInstance();
+        $model->change($title,$smalltitle,$_url,$content,$Id);
+
+    }
+
+
+    public function change(){
+
+        $Id=$_GET["Id"];
+        $model=advisoryModel::getInstance();
+        $result=$model->select($Id);
+//        print_r($result);
+
+        $tpl=Mysmarty::getInstance();
+        $tpl->assign("title",$result[0]["title"]);
+        $tpl->assign("smallcontent",$result[0]["smalltitle"]);
+        $tpl->assign("coverimg",$result[0]["coverimg"]);
+        $tpl->assign("content",$result[0]["content"]);
+        $tpl->assign("Id",$Id);
+        $tpl->display("advisory/changeadvisory.html");
+    }
+
+//    删除
+    public function delete(){
+        $Id=$_GET["Id"];
+        $model=advisoryModel::getInstance();
+        $result=$model->select($Id);
+        unlink($result[0]["coverimg"]);
+        $model->delete($Id);
+
+    }
+}

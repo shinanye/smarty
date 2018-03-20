@@ -1,0 +1,137 @@
+<?php
+/* Smarty version 3.1.30, created on 2018-03-13 16:30:29
+  from "D:\WWW\mbkj\app\admin\view\case\case_in.html" */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.30',
+  'unifunc' => 'content_5aa78c254c9419_90461251',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '6109e72aa54157df66478c1fbcf00d70800fff85' => 
+    array (
+      0 => 'D:\\WWW\\mbkj\\app\\admin\\view\\case\\case_in.html',
+      1 => 1520929760,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+    'file:app/admin/view/public/public.html' => 1,
+  ),
+),false)) {
+function content_5aa78c254c9419_90461251 (Smarty_Internal_Template $_smarty_tpl) {
+?>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>mbkj</title>
+    <link href="static/js/node_modules/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/public.css">
+    <style>
+        table img{
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+<?php $_smarty_tpl->_subTemplateRender("file:app/admin/view/public/public.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+
+<h1></h1>
+<div class="col-xs-9 col-md-10">
+    <ol class="breadcrumb">
+        <li><span class="glyphicon glyphicon-tag"></span><a href="#">案例信息管理</a></li>
+        <!--<li class="active">产品列表</li>-->
+    </ol>
+    <div class="col-lg-2">
+        <a href="http://localhost/mbkj/admin.php?c=case&a=in_add"><button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span>添加案例信息</button></a>
+    </div>
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th>id</th>
+            <th>排序</th>
+            <th>案例名称</th>
+            <th>案例分类</th>
+            <th>上传时间</th>
+            <th>封面图</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['in_arr']->value, 'item', false, 'key');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['key']->value => $_smarty_tpl->tpl_vars['item']->value) {
+?>
+        <tr>
+            <th scope="row"><?php echo $_smarty_tpl->tpl_vars['item']->value["Id"];?>
+</th>
+            <td><?php echo $_smarty_tpl->tpl_vars['key']->value+1;?>
+</td>
+            <td><?php echo $_smarty_tpl->tpl_vars['item']->value["title"];?>
+</td>
+            <td>
+                <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['caseArr']->value, 'item2');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['item2']->value) {
+?>
+                    <?php if ($_smarty_tpl->tpl_vars['item2']->value["Id"] == $_smarty_tpl->tpl_vars['item']->value["colunm_id"]) {?>
+                        <?php echo $_smarty_tpl->tpl_vars['item2']->value["colunm"];?>
+
+                    <?php }?>
+                <?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
+?>
+
+
+            </td>
+            <td><?php echo $_smarty_tpl->tpl_vars['item']->value["time"];?>
+</td>
+            <td><img src='<?php echo $_smarty_tpl->tpl_vars['item']->value["img"];?>
+' alt=""></td>
+            <td><a href='http://localhost/mbkj/admin.php?c=case&a=in_change&Id=<?php echo $_smarty_tpl->tpl_vars['item']->value["Id"];?>
+' class="btn btn-primary"><span class="glyphicon glyphicon-edit"></span></a><a href='http://localhost/mbkj/admin.php?c=case&a=in_delete&Id=<?php echo $_smarty_tpl->tpl_vars['item']->value["Id"];?>
+' class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></a></td>
+        </tr>
+        <?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
+?>
+
+        </tbody>
+    </table>
+</div>
+<div class="clear"></div>
+</body>
+<?php echo '<script'; ?>
+ src="static/js/node_modules/jquery/dist/jquery.min.js"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src="static/js/node_modules/bootstrap-3.3.7-dist/js/bootstrap.min.js"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+>
+    $().ready(function(){
+        var hei=$(window).height();
+        $(".sidebar").css("height",hei-60+"px");
+    });
+
+<?php echo '</script'; ?>
+>
+</html>
+
+<?php }
+}

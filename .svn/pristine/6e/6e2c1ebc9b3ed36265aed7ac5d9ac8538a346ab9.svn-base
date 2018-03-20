@@ -1,0 +1,63 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: XHY
+ * Date: 2018/3/11
+ * Time: 14:17
+ */
+class productController{
+    public function product(){
+        $model=new productModel();
+        $result=$model->select();
+//        print_r($result);
+        $tpl=Mysmarty::getInstance();
+        $tpl->assign("sqlArr",$result);
+        $tpl->display("product/product.html");
+
+
+    }
+    public function add(){
+
+        $tpl=Mysmarty::getInstance();
+
+
+
+        $tpl->display("product/addproduct.html");
+    }
+    public function insert(){
+        var_dump(boolval($_POST["title"]));
+        var_dump(boolval($_POST["smallcontent"]));
+        if(!isset($_POST["content"])||!boolval($_POST["title"])||!boolval($_POST["smallcontent"])){
+
+            echo "<script>alert('上传失败！');location.href='http://localhost/mbkj/admin.php?c=product&a=add'</script>";
+            exit;
+        }
+        $name=$_FILES["coverimg"]["name"];
+        if($name){
+            $error=$_FILES["coverimg"]["error"];
+            if($error==1||$error==2){
+                echo"<script>alert('文件过大');</script>";
+            }
+            if (is_uploaded_file($_FILES["coverimg"]["tmp_name"])) {
+                $_url="static/dbimg/"."pic".time().".png";
+                if(!move_uploaded_file($_FILES["coverimg"]["tmp_name"],$_url)){
+                    echo "文件移动失败";
+                }
+            } else {
+
+            }
+        }else{
+            echo "<script>alert('文件上传失败！');location.href='http://localhost/mbkj/admin.php?c=product&a=add'</script>";
+            exit;
+        }
+        $title=$_POST["title"];
+        $smalltitle=$_POST["smallcontent"];
+        $content=$_POST["content"];
+
+
+        $model=new productModel();
+        $model->insert($title,$smalltitle,$_url,$content);
+
+
+    }
+}
